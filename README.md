@@ -33,6 +33,9 @@
 
 #### Para utilizar a sua API Key no programa, insira a chave dentro da variável GOOGLEAPI_KEY como uma string, que se localiza logo nas primeiras linhas do código-fonte do programa.
 
+### Requerimentos:
+- Python 2.x
+
 ### Download:
 
 #### Você poderá baixar o programa utilizando o git:
