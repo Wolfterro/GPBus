@@ -47,7 +47,7 @@
 
 #### Você também poderá utilizar o wget para baixar o programa:
 
-    wget "https://raw.github.com/GPBus/master/GPBus-RJ.py"
+    wget "https://raw.github.com/Wolfterro/GPBus/master/GPBus-RJ.py"
     chmod +x GPBus-RJ.py
     ./GPBus-RJ.py
 
