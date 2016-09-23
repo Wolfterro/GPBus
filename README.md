@@ -13,6 +13,8 @@
 
 ![GPBus](http://i.imgur.com/8guv6Ky.gif)
 
+### [Verifique o CHANGELOG.txt para maiores informações sobre diferentes versões!](https://raw.github.com/Wolfterro/GPBus/master/CHANGELOG.txt)
+
 ### Opções:
 
 #### Aqui estão algumas opções disponíveis e que podem ser inseridas como argumentos pela linha de comando, simplificando a busca:
