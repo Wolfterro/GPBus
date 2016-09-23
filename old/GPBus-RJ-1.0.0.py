@@ -27,8 +27,8 @@ SOFTWARE.
 
 #========================================
 # Criado por: Wolfterro
-# Versão: 1.0.1 - Python 2.x
-# Data: 23/09/2016
+# Versão: 1.0.0 - Python 2.x
+# Data: 19/09/2016
 #========================================
 
 from __future__ import print_function
@@ -37,7 +37,6 @@ import os
 import sys
 import json
 import urllib2
-import datetime
 
 # Chave API do Google Maps
 # Necessária caso queira um controle maior de verificações de endereços ou um
@@ -57,7 +56,7 @@ BUS_API = "http://dadosabertos.rio.rj.gov.br/apiTransporte/apresentacao/rest/ind
 
 # Versão
 # ======
-VERSION = "1.0.1"
+VERSION = "1.0.0"
 
 # COLUNAS:
 # ========
@@ -109,14 +108,6 @@ def getBusLocation(latit, longit):
 			else:
 				return "Endereço não disponível!"
 
-# Alterando o formato de data e hora recebida
-# ===========================================
-def changeDateHourFormat(date):
-	getDate = date.split(" ")[0]
-	getHour = date.split(" ")[1]
-	newDate = datetime.datetime.strptime(getDate, '%m-%d-%Y').strftime('%d/%m/%Y')
-	return "%s - %s" % (getHour, newDate)
-
 # Iniciando processo de busca por número de ordem do ônibus
 # =========================================================
 def beginSearchProcessByOrder(userOrdem):
@@ -133,8 +124,7 @@ def beginSearchProcessByOrder(userOrdem):
 		if userOrdem == "":
 			break
 		elif infs[ORDEM] == userOrdem:
-			newDateHour = changeDateHourFormat(infs[DATAHORA])
-			pprintInfo = "Hora/Data: %s\nOrdem: %s\nLinha: %s\nLocalização: %s\nLatitude: %s\nLongitude: %s\nVelocidade: %s km/h" % (newDateHour, 
+			pprintInfo = "Data/Hora: %s\nOrdem: %s\nLinha: %s\nLocalização: %s\nLatitude: %s\nLongitude: %s\nVelocidade: %s km/h" % (infs[DATAHORA], 
 			infs[ORDEM], str(infs[LINHA]).replace(".0", ""), getBusLocation(infs[LATITUDE], infs[LONGITUDE]), 
 			infs[LATITUDE], infs[LONGITUDE], infs[VELOCIDADE])
 			
@@ -158,8 +148,7 @@ def beginSearchProcessByLine(userLinha):
 		if userLinha == "":
 			break
 		elif infs[LINHA] == userLinha:
-			newDateHour = changeDateHourFormat(infs[DATAHORA])
-			pprintInfo = "Hora/Data: %s\nOrdem: %s\nLinha: %s\nLocalização: %s\nLatitude: %s\nLongitude: %s\nVelocidade: %s km/h" % (newDateHour, 
+			pprintInfo = "Data/Hora: %s\nOrdem: %s\nLinha: %s\nLocalização: %s\nLatitude: %s\nLongitude: %s\nVelocidade: %s km/h" % (infs[DATAHORA], 
 			infs[ORDEM], str(infs[LINHA]).replace(".0", ""), getBusLocation(infs[LATITUDE], infs[LONGITUDE]), 
 			infs[LATITUDE], infs[LONGITUDE], infs[VELOCIDADE])
 			

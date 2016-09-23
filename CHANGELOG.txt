@@ -1,0 +1,18 @@
+GPBus
+=====
+
+Liste e localize as linhas de ônibus disponíveis no município do Rio de Janeiro!
+--------------------------------------------------------------------------------
+
+CHANGELOG:
+==========
+
+VERSÃO 1.0.1:
+- Alterado o formato de data e hora recebida pela API. O novo formato é HH:MM:SS - DD/MM/YYYY.
+
+#---------------------------------------------------------------------------------------------
+
+VERSÃO 1.0.0:
+- Versão inicial do programa.
+
+#---------------------------------------------------------------------------------------------
